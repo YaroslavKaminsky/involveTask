@@ -112,6 +112,17 @@ def index_page():
     return render_template('index.html', payment_form=payment_form)
 
 
+@app.route('/logs', methods=['GET'])
+def log_page():
+    log_list = []
+    with open('log.txt', 'r') as log_file:
+        line = log_file.readline()
+        while line:
+            log_list.append(line)
+            line = log_file.readline()
+    return render_template('log.html', log_list=log_list)
+
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
