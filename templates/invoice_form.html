@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Fragment of HTML page with the payment request form-->
+<form name="Invoice" method={{  invoice_data.method  }} action= {{  invoice_data.url  }}>
+<input type="hidden" name="ac_account_email"
+       value={{  invoice_data.ac_account_email  }}>
+<input type="hidden" name="ac_sci_name"
+       value={{  invoice_data.ac_sci_name  }}>
+<input type="hidden" name="ac_amount"
+       value={{  invoice_data.ac_amount  }}>
+<input type="hidden" name="ac_currency"
+       value={{  invoice_data.ac_currency  }}>
+<input type="hidden" name="ac_order_id"
+       value={{  invoice_data.ac_order_id  }}  >
+<input type="hidden" name="ac_sign"
+       value={{  invoice_data.ac_sign  }}>
+<!--<input type="hidden" name="ac_comments"-->
+<!--       value={{  invoice_data.ac_comments  }}>-->
+<script type="text/javascript">document.Invoice.submit();</script>
+</form>
+</body>
+</html>

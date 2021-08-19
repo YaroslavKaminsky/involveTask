@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="Pay" method="post" action="https://pay.piastrix.com/ru/pay"
+      accept-charset="UTF-8">
+    <input type="hidden" name="amount" value={{ pay_form_data.amount }}>
+    <input type="hidden" name="currency" value={{ pay_form_data.currency }}>
+    <input type="hidden" name="shop_id" value={{ pay_form_data.shop_id }}>
+    <input type="hidden" name="sign"
+           value={{ pay_form_data.sign }}>
+    <input type="hidden" name="shop_order_id"
+           value={{ pay_form_data.shop_order_id }}>
+    <input type="hidden" name="description"
+           value={{ pay_form_data.description }}>
+    <script type="text/javascript">document.Pay.submit();</script>
+</form>
+</body>
+</html>
